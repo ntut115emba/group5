@@ -24,6 +24,10 @@ menu.addEventListener('click',()=>{
   menu.setAttribute('aria-expanded',String(open));
 });
 navLinks.forEach(a=>a.addEventListener('click',()=>{sidebar.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+document.querySelectorAll('.exhibit-index a').forEach(a=>a.addEventListener('click',()=>{
+  sidebar.classList.remove('open');
+  menu.setAttribute('aria-expanded','false');
+}));
 
 document.querySelectorAll('.exhibit-open').forEach(button=>button.addEventListener('click',()=>{
   lightboxImage.src=button.dataset.image;
